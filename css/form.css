@@ -1,6 +1,7 @@
 /* ŠTÝL INPUTU MENA A MAILU */
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
     border: 4px solid black;
     height: 40px;
     width: 250px;

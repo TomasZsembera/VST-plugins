@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once 'header.php';
+require_once "class.php";
 ?>
 <!DOCTYPE html>
 <html lang="sk">
