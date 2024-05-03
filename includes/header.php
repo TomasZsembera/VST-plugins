@@ -1,7 +1,7 @@
 <header class="container main-header">
     <div>
-        <a href="VST-plugins/index.php">
-            <img src="VST-plugins/img/logo.png" height="40">
+        <a href="../VST-plugins/index.php">
+            <img src="../VST-plugins/img/logo.png" height="40">
         </a>
     </div>
     <!--Navigacia-->
