@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'header.php';
+include_once 'includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -54,7 +54,7 @@ include_once 'header.php';
     </section>
     </div>
   </main>
-  <?php include_once 'footer.php'; ?>
+  <?php include_once 'includes/footer.php'; ?>
   <script src="js/accordion.js"></script>
   <script src="js/menu.js"></script>
 </body>

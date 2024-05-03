@@ -1,7 +1,7 @@
 <?php
-include_once 'header.php';
-require_once 'connection.php';
-require_once 'class.php';
+include_once '../includes/header.php';
+require_once '../includes/connection.php';
+require_once '../includes/class.php';
 if (isset($_POST["submit"])) {
     $email = $_POST['email'];
     $heslo = $_POST['heslo'];
@@ -21,9 +21,9 @@ if (isset($_POST["submit"])) {
     <meta name="keywords" content="Formular">
     <meta name="author" content="Tomáš Zsembera">
     <title>Moja stránka</title>
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -50,7 +50,7 @@ if (isset($_POST["submit"])) {
             </div>
         </section>
     </main>
-    <?php include_once 'footer.php'; ?>
+    <?php include_once '../includes/footer.php'; ?>
     <script src="js/menu.js"></script>
 </body>
 

@@ -3,6 +3,19 @@
   box-sizing: border-box;
 }
 
+.produkty-container {
+  padding-bottom: 50px;
+  /* Pridajte dolný padding */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  box-sizing: border-box;
+}
+
 body {
   font-family: OCR A Std, monospace, Tahoma, sans-serif;
 }

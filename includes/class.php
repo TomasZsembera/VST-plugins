@@ -20,7 +20,7 @@ class Login
                 // Prihlásenie úspešné
                 $_SESSION['email'] = $email;
 
-                header('Location: kontakt.php');
+                header('Location: ../produkty.php');
                 exit();
             } else {
                 // Prihlásenie neúspešné
@@ -42,6 +42,7 @@ class Produkty
         $this->conn = $conn;
     }
 
+
     public function getProdukty()
     {
         try {
@@ -49,8 +50,10 @@ class Produkty
             $stmt->execute();
             $produkty = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            echo '<div class="produkty-container">'; // Pridajte obalový div
+
             foreach ($produkty as $produkt) {
-                echo '<div class="card" style="width: 18rem;">';
+                echo '<div class="card" style="width: 1rem; height: 5rem;">'; // Upravte šírku a výšku
                 echo '<img class="card-img-top" src="' . $produkt['obrazok'] . '" alt="Card image cap">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $produkt['nazov'] . '</h5>';
@@ -58,6 +61,9 @@ class Produkty
                 echo '</div>';
                 echo '</div>';
             }
+
+            echo '</div>'; // Ukončite obalový div
+
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

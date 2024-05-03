@@ -1,6 +1,11 @@
 <?php
 session_start();
-include_once 'header.php';
+include_once 'includes/header.php';
+require_once 'includes/connection.php';
+require_once "includes/class.php";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>
@@ -19,5 +24,19 @@ include_once 'header.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+<main>
 
-<?php include_once 'footer.php'; ?>
+    <body>
+
+
+        <?php
+        $produkty = new Produkty($conn);
+        $produkty->getProdukty();
+        ?>
+    </body>
+</main>
+
+
+<script src="js/menu.js"></script>
+<script src="js/slider.js"></script>
+<?php include_once 'includes/footer.php'; ?>

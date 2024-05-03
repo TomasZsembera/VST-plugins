@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'header.php';
+include_once 'includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +60,7 @@ include_once 'header.php';
 
 
   </main>
-  <?php include_once 'footer.php'; ?>
+  <?php include_once 'includes/footer.php'; ?>
   <script src="js/menu.js"></script>
   <script src="js/accordion.js"></script>
   <script src="js/slider.js"></script>

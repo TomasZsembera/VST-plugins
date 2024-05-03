@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once 'header.php';
-require_once "class.php";
+include_once 'includes/header.php';
+require_once "includes/class.php";
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -63,7 +63,7 @@ require_once "class.php";
       </div>
     </section>
   </main>
-  <?php include_once 'footer.php'; ?>
+  <?php include_once 'includes/footer.php'; ?>
   <script src="js/menu.js"></script>
 </body>
 
