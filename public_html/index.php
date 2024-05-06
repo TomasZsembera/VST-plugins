@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'includes/header.php';
+include_once '../includes/header.php';
 
 ?>
 <!DOCTYPE html>
@@ -14,9 +14,9 @@ include_once 'includes/header.php';
   <meta name="keywords" content="Domov">
   <meta name="author" content="Tomáš Zsembera">
   <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/slider.css">
-  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/slider.css">
+  <link rel="stylesheet" href="../css/banner.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -28,21 +28,21 @@ include_once 'includes/header.php';
     <!--Hlavné bannery a napisy v nich-->
     <section class="slides-container">
       <div class="slide fade">
-        <img src="img/banner1.jpg">
+        <img src="../img/banner1.jpg">
         <div class="slide-text">
           Autotune saved my life
         </div>
       </div>
 
       <div class="slide fade">
-        <img src="img/banner2.jpg">
+        <img src="../img/banner2.jpg">
         <div class="slide-text">
           Všetky pluginy zakúpené
         </div>
       </div>
 
       <div class="slide fade">
-        <img src="img/banner3.jpg">
+        <img src="../img/banner3.jpg">
         <div class="slide-text">
           Profesionálny mix & master
         </div>
@@ -83,11 +83,11 @@ include_once 'includes/header.php';
   </main>
 
 
-  <?php include_once 'includes/footer.php'; ?>
-  <script src="js/menu.js"></script>
-  <script src="js/slider.js"></script>
+  <?php include_once '../includes/footer.php'; ?>
+  <script src="../js/menu.js"></script>
+  <script src="../js/slider.js"></script>
   <!--KREATIVNY KOD ZADANIE VEKU-->
-  <script src="js/vek.js"></script>
+  <script src="../js/vek.js"></script>
 </body>
 
 </html>

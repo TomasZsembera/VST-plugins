@@ -3,18 +3,8 @@
   box-sizing: border-box;
 }
 
-.produkty-container {
-  padding-bottom: 50px;
-  /* Pridajte dolný padding */
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
-.card {
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: OCR A Std, monospace, Tahoma, sans-serif;
@@ -250,4 +240,73 @@ footer p a {
 .tlacidlo:hover {
   background-color: #3498db;
   color: white;
+}
+
+
+.produkty-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.produkt-card {
+
+  width: 18rem;
+  height: auto;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 5rem;
+  border: solid 2px black;
+  transition: scale 0.3s ease;
+}
+
+.produkt-card:hover {
+  scale: 1.1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.produkt-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+
+.produkt-title {
+  /* Add styles for the product title here */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.produkt-text {
+  /* Add styles for the product text here */
+  margin-left: 1rem;
+}
+
+.price-cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-cart-button {
+  /* Add your styles here */
+  background-color: black;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  border: solid 2px black;
+  transition: background-color 0.3s ease;
+
+}
+
+.shopping-cart-button:hover {
+  background-color: white;
+  color: black;
+  border: solid 2px black;
+
 }

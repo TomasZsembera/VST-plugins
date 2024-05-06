@@ -51,7 +51,7 @@ if (isset($_POST["submit"])) {
         </section>
     </main>
     <?php include_once '../includes/footer.php'; ?>
-    <script src="js/menu.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>

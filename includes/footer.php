@@ -17,9 +17,9 @@
         </div>
         <div class="col-25">
             <h4>Rýchle odkazy</h4>
-            <p><a href="/">Domov</a></p>
-            <p><a href="/qna">Q&A</a></p>
-            <p><a href="/kontakt">Kontakt</a></p>
+            <p><a href="../public_html/index.php">Domov</a></p>
+            <p><a href="../public_html/qna.php">Q&A</a></p>
+            <p><a href="../public_html/kontakt.php">Kontakt</a></p>
         </div>
         <div class="col-25">
             <h4>Nájdete nás</h4>

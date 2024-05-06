@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'includes/header.php';
+include_once '../includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +13,9 @@ include_once 'includes/header.php';
   <meta name="keywords" content="Obrázky">
   <meta name="author" content="Tomáš Zsembera">
   <title>Moja stránka</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/banner.css">
-  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/banner.css">
+  <link rel="stylesheet" href="../css/slider.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -30,25 +30,25 @@ include_once 'includes/header.php';
     </section>
     <section class="slides-container">
       <div class="slide fade">
-        <img src="img/portfolio1.jpg">
+        <img src="../img/portfolio1.jpg">
 
       </div>
 
       <div class="slide fade">
-        <img src="img/portfolio2.jpg">
+        <img src="../img/portfolio2.jpg">
 
       </div>
 
       <div class="slide fade">
-        <img src="img/portfolio3.jpg">
+        <img src="../img/portfolio3.jpg">
 
       </div>
       <div class="slide fade">
-        <img src="img/portfolio4.jpg">
+        <img src="../img/portfolio4.jpg">
 
       </div>
       <div class="slide fade">
-        <img src="img/portfolio5.jpg">
+        <img src="../img/portfolio5.jpg">
 
       </div>
 
@@ -60,10 +60,10 @@ include_once 'includes/header.php';
 
 
   </main>
-  <?php include_once 'includes/footer.php'; ?>
-  <script src="js/menu.js"></script>
-  <script src="js/accordion.js"></script>
-  <script src="js/slider.js"></script>
+  <?php include_once '../includes/footer.php'; ?>
+  <script src="../js/menu.js"></script>
+  <script src="../js/accordion.js"></script>
+  <script src="../js/slider.js"></script>
 </body>
 
 </html>

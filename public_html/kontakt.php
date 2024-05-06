@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once 'includes/header.php';
-require_once "includes/class.php";
+include_once '../includes/header.php';
+require_once "../includes/class.php";
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -14,9 +14,9 @@ require_once "includes/class.php";
   <meta name="keywords" content="Formular">
   <meta name="author" content="Tomáš Zsembera">
   <title>Moja stránka</title>
-  <link rel="stylesheet" href="css/form.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/banner.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -48,7 +48,7 @@ require_once "includes/class.php";
         <div class="col-50 text-right">
           <h3>Napíšte nám</h3>
           <!--formulár-->
-          <form id="contact" action="thankyou.html">
+          <form id="contact" action="thankyou.php">
             <input type="text" placeholder="Vaše meno" id="meno" required><br>
             <input type="email" placeholder="Váš email" id="email" required><br>
             <textarea name="" placeholder="Vaša správa" id="sprava"></textarea><br>
@@ -63,8 +63,8 @@ require_once "includes/class.php";
       </div>
     </section>
   </main>
-  <?php include_once 'includes/footer.php'; ?>
-  <script src="js/menu.js"></script>
+  <?php include_once '../includes/footer.php'; ?>
+  <script src="../js/menu.js"></script>
 </body>
 
 </html>
