@@ -47,8 +47,10 @@ if (isset($_GET['id'])) {
         echo "</div></div>";
     }
 ?>
+
     </body>
 </main>
+<?php include_once '../includes/footer.php'; ?>
 
 
 <script src="../js/menu.js"></script>

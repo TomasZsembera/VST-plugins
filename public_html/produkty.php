@@ -40,7 +40,7 @@ error_reporting(E_ALL);
 
     </body>
 </main>
-
+<?php include_once '../includes/footer.php'; ?>
 
 <script src="../js/menu.js"></script>
 <script src="../js/slider.js"></script>

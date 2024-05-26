@@ -148,6 +148,9 @@ header {
 }
 
 /*FOOTER*/
+footer {
+  margin-top: 550px!important;
+}
 
 footer p a {
   text-decoration: none;
