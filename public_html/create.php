@@ -45,19 +45,19 @@ if (isset($_POST['submit'])) {
 <main>
 
     <body>
-        <br>
-        <br>
-        <br>
+    <div class = "create-container">
         <form id="createProduct" method="post" enctype="multipart/form-data">
+        <div class = "create-group">
             <input type="text" placeholder="Product Name" id="productName" name="productName" required><br>
             <input type="number" step="0.01" placeholder="Product Price" id="productPrice" name="productPrice"
                 required><br>
             <textarea placeholder="Product Description" id="productDescription" name="productDescription"
                 required></textarea><br>
             <input type="file" id="productImage" name="productImage" required><br>
-            <input type="submit" value="Create Product" name="submit">
+            </div>
+            <input type="submit" value="Create Product" name="submit" class = "create-submit">
         </form>
-
+        </div>
 
     </body>
 </main>

@@ -87,7 +87,7 @@ include_once '../includes/header.php';
   <script src="../js/menu.js"></script>
   <script src="../js/slider.js"></script>
   <!--KREATIVNY KOD ZADANIE VEKU-->
-  <script src="../js/vek.js"></script>
+  <!--<script src="../js/vek.js"></script>-->
 </body>
 
 </html>
