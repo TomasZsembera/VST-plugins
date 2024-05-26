@@ -6,6 +6,21 @@ require_once "../includes/class.php";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+if (isset($_POST['submit'])) {
+    $productName = $_POST['productName'];
+    $productPrice = $_POST['productPrice'];
+    $productDescription = $_POST['productDescription'];
+    $productImage = $_FILES['productImage']['name'];
+    $productImageTmp = $_FILES['productImage']['tmp_name'];
+
+    // Define the new name for the uploaded file
+    $productImageNewName =  '../img/' . $productImage;
+
+    $productImageDestination = '../img/' . $productImageNewName;
+    move_uploaded_file($productImageTmp, $productImageDestination);
+    $product = new Produkty($conn);
+    $product->createProduct($productName, $productPrice, $productDescription, $productImageNewName);
+}
 ?>
 
 <!DOCTYPE html>

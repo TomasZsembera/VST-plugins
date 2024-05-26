@@ -75,6 +75,18 @@ class Produkty
             echo "Error: " . $e->getMessage();
         }
     }
-
+    public function createProduct($productName, $productPrice, $productDescription, $productImageNewName)
+    {
+        try {
+            $stmt = $this->conn->prepare("INSERT INTO Produkty (nazov, cena, popis, obrazok) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$productName, $productPrice, $productDescription, $productImageNewName]);
+            header('Location: produkty.php');
+            exit();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 }
+
+
 ?>
