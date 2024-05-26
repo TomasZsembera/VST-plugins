@@ -3,9 +3,12 @@ session_start();
 include_once '../includes/header.php';
 require_once '../includes/connection.php';
 require_once "../includes/class.php";
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+if (!isset($_SESSION['email'])) {
+    header('Location: index.php');
+    exit();
+}
+
 if (isset($_POST['submit'])) {
     $productName = $_POST['productName'];
     $productPrice = $_POST['productPrice'];
@@ -13,7 +16,7 @@ if (isset($_POST['submit'])) {
     $productImage = $_FILES['productImage']['name'];
     $productImageTmp = $_FILES['productImage']['tmp_name'];
 
-    // Define the new name for the uploaded file
+    
     $productImageNewName =  '../img/' . $productImage;
 
     $productImageDestination = '../img/' . $productImageNewName;

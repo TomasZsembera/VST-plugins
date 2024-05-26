@@ -272,7 +272,7 @@ footer p a {
   margin-top: auto;
   margin-right: 20px;
   margin-bottom: 20px;
-  line-height: 30px;
+  line-height: 50px;
 }
 
 .produkt-card:hover {
@@ -340,6 +340,7 @@ footer p a {
     cursor: pointer;
     border-radius: 15px;
     line-height: 3;
+    border: solid 2px black;
   
 }
 #create:hover {
@@ -348,6 +349,7 @@ footer p a {
     transition: 0.3s;
     scale: 1.1;
     border: solid 2px black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
     
 }
 .product-container {
@@ -388,4 +390,42 @@ footer p a {
   padding: 5%;
   border-radius: 10px;
   background-color: #e7e7e7;
+}
+
+.edit-button {
+  background-color: #328fe6;
+  color: white!important;
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: 5rem;
+  border: solid 2px black;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.edit-button:hover {
+  background-color: white!important;
+  color: black!important;
+  border: solid 2px black;
+}
+
+.delete-button {
+  background-color: red;
+  color: white!important;
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: 5rem!important;
+  border: solid 2px black;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.delete-button:hover {
+  background-color: white!important;
+  color: black!important;
+  border: solid 2px black;
 }

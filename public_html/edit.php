@@ -3,9 +3,10 @@ session_start();
 include_once '../includes/header.php';
 require_once '../includes/connection.php';
 require_once "../includes/class.php";
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+if (!isset($_SESSION['email'])) {
+    header('Location: index.php');
+    exit();
+}
 $product = new Produkty($conn);
 $PRODUKT = $product->getProduct($_GET['id']);
 if (isset($_POST['submit'])) {
