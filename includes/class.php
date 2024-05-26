@@ -52,6 +52,7 @@ class Produkty
 
             echo '<div class="produkty-container">';
 
+
             foreach ($produkty as $produkt) {
 
                 echo '<div class="card produkt-card">';
@@ -62,12 +63,20 @@ class Produkty
                 echo '<div class="price-cart-container">';
                 echo '<p class="card-text produkt-text">Cena: ' . $produkt['cena'] . '</p>';
                 echo '<a href="produkt.php?id=' . $produkt['produkt_id'] . '" class="shopping-cart-button"><i class="fa fa-shopping-cart"></i></a>';
+
+                // Check if the user is logged in
+                if (isset($_SESSION['email'])) {
+                    echo '<a href="edit.php?id=' . $produkt['produkt_id'] . '" class="edit-button">Edit</a>';
+                    echo '<a href="delete.php?id=' . $produkt['produkt_id'] . '" class="delete-button">Delete</a>';
+                }
+
                 echo '</div>';
 
                 echo '</div>';
                 echo '</div>';
 
             }
+ 
 
             echo '</div>';
 
@@ -80,6 +89,18 @@ class Produkty
         try {
             $stmt = $this->conn->prepare("INSERT INTO Produkty (nazov, cena, popis, obrazok) VALUES (?, ?, ?, ?)");
             $stmt->execute([$productName, $productPrice, $productDescription, $productImageNewName]);
+            header('Location: produkty.php');
+            exit();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function deleteProduct($id)
+    {
+        try {
+            $stmt = $this->conn->prepare("DELETE FROM Produkty WHERE produkt_id = ?");
+            $stmt->execute([$id]);
             header('Location: produkty.php');
             exit();
         } catch (PDOException $e) {
