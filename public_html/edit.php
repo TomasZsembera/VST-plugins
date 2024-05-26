@@ -46,17 +46,20 @@ if (isset($_POST['submit'])) {
 <main>
 
     <body>
-        <br>
-        <br>
-        <br>
-        <form id="createProduct" method="post" enctype="multipart/form-data">
+        <div class = "edit-container">
+        <form id="createProduct" method="post" enctype="multipart/form-data" class = "edit-form">
+            <div class = "edit-group">
             <input type="text" placeholder="Product Name" id="productName" name="productName" value="<?php echo $PRODUKT['nazov']; ?>"><br>
             <input type="number" step="0.01" placeholder="Product Price" id="productPrice" name="productPrice" value="<?php echo $PRODUKT['cena']; ?>"><br>
             <textarea placeholder="Product Description" id="productDescription" name="productDescription"><?php echo $PRODUKT['popis']; ?></textarea><br>
             <input type="file" id="productImage" name="productImage"><br>
             <input type="hidden" id="existingImage" name="existingImage" value="<?php echo $PRODUKT['obrazok']; ?>">
-            <input type="submit" value="Update Product" name="submit">
+            </div>
+            <input type="submit" value="Update Product" name="submit"
+            class = "edit-submit">
+            
         </form>
+        </div>
 
 
     </body>
