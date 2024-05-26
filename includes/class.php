@@ -52,9 +52,9 @@ class Produkty
 
             echo '<div class="produkty-container">';
 
-
             foreach ($produkty as $produkt) {
 
+                echo '<a href="produkt_p.php?id=' . $produkt['produkt_id'] . '" class="card-link">'; // Start of card link
                 echo '<div class="card produkt-card">';
                 echo '<img class="card-img-top produkt-image" src="' . $produkt['obrazok'] . '" alt="Card image cap">';
                 echo '<div class="card-body">';
@@ -73,10 +73,10 @@ class Produkty
                 echo '</div>';
 
                 echo '</div>';
-                echo '</div>';
+                echo '</div>'; // End of card
+                echo '</a>'; // End of card link
 
             }
- 
 
             echo '</div>';
 
@@ -84,6 +84,20 @@ class Produkty
             echo "Error: " . $e->getMessage();
         }
     }
+    public function getProduct($id)
+    {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM Produkty WHERE produkt_id = ?");
+            $stmt->execute([$id]);
+            $produkt = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $produkt;
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+ 
     public function createProduct($productName, $productPrice, $productDescription, $productImageNewName)
     {
         try {
