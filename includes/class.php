@@ -59,13 +59,13 @@ class Produkty
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title produkt-title">' . $produkt['nazov'] . '</h5>';
 
-                echo '<div class="price-cart-container">'; // Add a new div
+                echo '<div class="price-cart-container">';
                 echo '<p class="card-text produkt-text">Cena: ' . $produkt['cena'] . '</p>';
                 echo '<a href="produkt.php?id=' . $produkt['produkt_id'] . '" class="shopping-cart-button"><i class="fa fa-shopping-cart"></i></a>';
-                echo '</div>'; // End the new div
+                echo '</div>';
 
-                echo '</div>'; // End card-body div
-                echo '</div>'; // End card div
+                echo '</div>';
+                echo '</div>';
 
             }
 

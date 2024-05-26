@@ -27,12 +27,19 @@ error_reporting(E_ALL);
 <main>
 
     <body>
+        <br>
+        <br>
+        <br>
+        <form id="createProduct" method="post" enctype="multipart/form-data">
+            <input type="text" placeholder="Product Name" id="productName" name="productName" required><br>
+            <input type="number" step="0.01" placeholder="Product Price" id="productPrice" name="productPrice"
+                required><br>
+            <textarea placeholder="Product Description" id="productDescription" name="productDescription"
+                required></textarea><br>
+            <input type="file" id="productImage" name="productImage" required><br>
+            <input type="submit" value="Create Product" name="submit">
+        </form>
 
-
-        <?php
-        $produkty = new Produkty($conn);
-        $produkty->getProdukty();
-        ?>
 
     </body>
 </main>
