@@ -121,6 +121,17 @@ class Produkty
             echo "Error: " . $e->getMessage();
         }
     }
+    public function editProduct($id, $productName, $productPrice, $productDescription, $productImageNewName)
+    {
+        try {
+            $stmt = $this->conn->prepare("UPDATE Produkty SET nazov = ?, cena = ?, popis = ?, obrazok = ? WHERE produkt_id = ?");
+            $stmt->execute([$productName, $productPrice, $productDescription, $productImageNewName, $id]);
+            header('Location: produkty.php');
+            exit();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 }
 
 
