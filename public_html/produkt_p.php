@@ -38,13 +38,15 @@ if (isset($_GET['id'])) {
     <body>
 <?php 
     if ($PRODUKT) {
-        echo "<h1>" . $PRODUKT['nazov'] . "</h1>";
-        echo "<p>" . $PRODUKT['cena'] . "</p>";
-        echo "<p>" . $PRODUKT['popis'] . "</p>";
-        echo "<img src='../img/" . $PRODUKT['obrazok'] . "' alt='product'>";
+        echo "<div class='product-container'>";
+        echo "<img class='product-image' src='../img/" . $PRODUKT['obrazok'] . "' alt='product'>";
+        echo "<div class='product-info'>";
+        echo "<h1 class='product-title'>" . $PRODUKT['nazov'] . "</h1>";
+        echo "<p class='product-title'>" . $PRODUKT['cena'] . " €</p>";
+        echo "<p class='product-description'>" . $PRODUKT['popis'] . "</p>";
+        echo "</div></div>";
     }
-    ?>
-
+?>
     </body>
 </main>
 

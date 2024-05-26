@@ -33,7 +33,7 @@ error_reporting(E_ALL);
         $produkty = new Produkty($conn);
         $produkty->getProdukty();
         if (isset($_SESSION['email'])) {
-            echo "<a href='create.php' id='create'>Create Product</a>";
+            echo "<a href='create.php' id='create'>Create</a>";
         }
 
         ?>

@@ -66,8 +66,10 @@ class Produkty
 
                 // Check if the user is logged in
                 if (isset($_SESSION['email'])) {
-                    echo '<a href="edit.php?id=' . $produkt['produkt_id'] . '" class="edit-button">Edit</a>';
-                    echo '<a href="delete.php?id=' . $produkt['produkt_id'] . '" class="delete-button">Delete</a>';
+                    echo '<div class="card-spacer">'; 
+                    echo '<br><a href="edit.php?id=' . $produkt['produkt_id'] . '" class="edit-button">Edit</a>';
+                    echo '<br><a href="delete.php?id=' . $produkt['produkt_id'] . '" class="delete-button">Delete</a>';
+                    echo '</div>'; // Close new div
                 }
 
                 echo '</div>';

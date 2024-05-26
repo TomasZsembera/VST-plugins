@@ -261,6 +261,18 @@ footer p a {
   margin-top: 5rem;
   border: solid 2px black;
   transition: scale 0.3s ease;
+  text-decoration: none;
+}
+.produkt-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-spacer {
+  margin-top: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
 }
 
 .produkt-card:hover {
@@ -296,7 +308,7 @@ footer p a {
   background-color: black;
   padding: 10px;
   border-radius: 15px;
-  color: white;
+  color: white!important;
   text-decoration: none;
   margin-right: 1rem;
   border: solid 2px black;
@@ -306,7 +318,7 @@ footer p a {
 
 .shopping-cart-button:hover {
   background-color: white;
-  color: black;
+  color: black!important;
   border: solid 2px black;
 
 }
@@ -337,4 +349,43 @@ footer p a {
     scale: 1.1;
     border: solid 2px black;
     
+}
+.product-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: start;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.product-image {
+  width: 50%; /* adjust as needed */
+  margin-right: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.product-info {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-title {
+  font-size: 35px; /* adjust as needed */
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+
+}
+
+
+
+
+.product-description {
+  font-size: 20px; 
+  border: solid 1px black;
+  padding: 5%;
+  border-radius: 10px;
+  background-color: #e7e7e7;
 }
