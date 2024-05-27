@@ -9,7 +9,6 @@ if (isset($_POST['remove'])) {
     $CART->removeFromCart($id);
 }
 $CART = $CART->getCart();
-var_dump($CART);
 ?>
 <!DOCTYPE html>
 <html lang="en">
