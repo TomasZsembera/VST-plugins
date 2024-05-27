@@ -1038,3 +1038,18 @@ footer p a {
 .container-btn-file:hover::before {
   width: 100%;
 }
+
+th {
+  background-color: #328fe6;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  background-color: #e8f3fd;
+}
+
+table {
+  margin-top: 200px;
+}
