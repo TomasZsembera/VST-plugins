@@ -17,6 +17,7 @@
             <?php } else { ?>
                 <li><a href="../public_html/login.php">Prihlásiť sa</a></li>
             <?php } ?>
+            <li><a href="../public_html/shopping_c.php"><i class="fa fa-shopping-cart kosik"></i></a></li>
         </ul>
         <a class="hamburger" id="hamburger">
             <i class="fa fa-bars"></i>
