@@ -28,16 +28,20 @@ include_once '../includes/header.php';
 <div class="parent-container-chckt">
   <form class="colorful-form">
   <div class="chckt-group">
-    <label class="chckt-label" for="name">Name:</label>
-    <input required="" placeholder="Enter your name" class="chckt-input" type="text">
+    <label class="chckt-label" for="name">Meno a Priezvisko:</label>
+    <input required="" placeholder="Meno" class="chckt-input" type="text">
+    <br>
+    <br>
+    <input required="" placeholder="Priezvisko" class="chckt-input" type="text">
   </div>
   <div class="chckt-group">
     <label class="chckt-label" for="email">Email:</label>
     <input required="" placeholder="Enter your email" class="chckt-input" name="email" id="email" type="email">
   </div>
   <div class="chckt-group">
-    <label class="chckt-label" for="message">Adress:</label>
-    <input required="" placeholder="Enter your adress" class="chckt-input-a" name="message" id="message" type= "text">
+    <label class="chckt-label" for="message">Adresa:</label>
+    <input required="" placeholder="Adresa" class="chckt-input-a" name="message" id="message" type= "text">
+    <input required="" placeholder="Mesto" class="chckt-input-a" name="message" id="message" type= "text">
   </div>
   <button class="chckt-button" type="submit">CHECKOUT</button>
 </form>
