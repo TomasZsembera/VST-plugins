@@ -17,14 +17,18 @@ if (isset($_SESSION['cart'])) {
 }
 
 if (isset($_POST['submit'])) {
+  if ($subtotal != 0) {
     $meno = $_POST['meno'];
     $priezvisko = $_POST['priezvisko'];
     $email = $_POST['email'];
     $adresa = $_POST['adresa'];
     $mesto = $_POST['mesto'];
     $objednavky = new Objednavky($conn);
-    $objednavky->createObjednavka($meno, $priezvisko, $email, $adresa, $mesto, $subtotal);
+    $objednavky->createObjednavka($meno, $priezvisko, $adresa, $mesto, $email, $subtotal);
    
+  } else {
+    echo '<script>alert("Cart is empty")</script>';
+  }
  
 }
 ?>
@@ -54,19 +58,19 @@ if (isset($_POST['submit'])) {
   <form method = "POST" class="colorful-form">
   <div class="chckt-group">
     <label class="chckt-label" for="name">Meno a Priezvisko:</label>
-    <input required="" placeholder="Meno" class="chckt-input" type="text" name = "meno">
+    <input required placeholder="Meno" class="chckt-input" type="text" name = "meno">
     <br>
     <br>
-    <input required="" placeholder="Priezvisko" class="chckt-input" type="text" name = "priezvisko">
+    <input required placeholder="Priezvisko" class="chckt-input" type="text" name = "priezvisko">
   </div>
   <div class="chckt-group">
-    <label class="chckt-label" for="email">Email:</label>
-    <input required="" placeholder="Enter your email" class="chckt-input" name="email" id="email" type="email">
+    <label class="chckt-label" for="email" required>Email:</label>
+    <input required placeholder="Enter your email" class="chckt-input" name="email" id="email" type="email">
   </div>
   <div class="chckt-group">
     <label class="chckt-label" for="message">Adresa:</label>
-    <input required="" placeholder="Adresa" class="chckt-input-a" name="adresa" id="message" type= "text">
-    <input required="" placeholder="Mesto" class="chckt-input-a" name="mesto" id="message" type= "text">
+    <input required placeholder="Adresa" class="chckt-input-a" name="adresa" id="message" type= "text">
+    <input required placeholder="Mesto" class="chckt-input-a" name="mesto" id="message" type= "text">
   </div>
   <input class="chckt-button" type="submit" value = "CHECKOUT" name = "submit"></input>
 </form>

@@ -243,15 +243,21 @@ class Objednavky {
     public function createObjednavka($meno, $priezvisko, $adresa, $mesto, $email, $suma)
     {
         try {
-            $stmt = $this->conn->prepare("INSERT INTO Objednavky (meno, priezvisko, adresa, mesto, email, suma) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->execute([$meno, $priezvisko, $adresa, $mesto, $email, $suma]);
+            $stmt = $this->conn->prepare("INSERT INTO Objednavky (meno, priezvisko, adresa, mesto, email, suma) VALUES (:meno, :priezvisko, :adresa, :mesto, :email, :suma)");
+            $stmt->execute([
+                ':meno' => $meno, 
+                ':priezvisko' => $priezvisko, 
+                ':adresa' => $adresa, 
+                ':mesto' => $mesto, 
+                ':email' => $email, 
+                ':suma' => $suma
+            ]);
             unset($_SESSION['cart']);
             header('Location: shopping_c.php');
             exit();
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
+    }
 }
-}
-
 ?>
