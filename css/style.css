@@ -73,15 +73,18 @@ header {
 .main-menu li {
   display: inline;
   margin-left: 20px;
+  transition: 0.3s;
 }
 
 .main-menu li a {
   text-decoration: none;
   color: black;
+  transition: 0.3s;
+
 }
 
 .main-menu li:hover a {
-  text-decoration: underline;
+  text-decoration: none;
   background-color: black;
   color: #f7f7f7;
 }
