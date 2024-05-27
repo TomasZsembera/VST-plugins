@@ -188,12 +188,20 @@ class Kosik
         return $_SESSION['cart'];
     }
 
-    public function removeFromCart($id)
-    {
-        if (($key = array_search($id, $_SESSION['cart'])) !== false) {
-            unset($_SESSION['cart'][$key]);
+
+
+    public function removeFromCart($index)
+    {   
+
+        
+        if (isset($_SESSION['cart'][$index])) {
+            unset($_SESSION['cart'][$index]);
+            
+            $_SESSION['cart'] = array_values($_SESSION['cart']);
+            header('Location: ../public_html/shopping_c.php');
         }
     }
+
 }
 
 

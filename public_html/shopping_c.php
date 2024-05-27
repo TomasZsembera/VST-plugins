@@ -4,6 +4,10 @@ include_once '../includes/header.php';
 require_once '../includes/connection.php';
 require_once "../includes/class.php";
 $CART = new Kosik($conn);
+if (isset($_POST['remove'])) {
+    $id = $_POST['id'];
+    $CART->removeFromCart($id);
+}
 $CART = $CART->getCart();
 var_dump($CART);
 ?>
@@ -60,15 +64,23 @@ var_dump($CART);
       <div class="products">
         <?php
         
+        
         if (isset($_SESSION['cart'])) {
-          foreach ($CART as $product) {
+          foreach ($_SESSION['cart'] as $index => $product) {
             echo '<div class="product">';
             echo '<img src="' . $product['image'] . '" height="60" width="60" alt="' . $product['name'] . '">';
             echo '<div><span>' . $product['name'] . '</span></div>';
             echo '<label class="price small">€' . $product['price'] . '</label>';
+            echo '<form action="" method="POST">';
+            echo '<input type="hidden" name="id" value="' . $index . '">';
+            echo '<button type="submit" name="remove" class="rmv-btn">Remove</button>';
+            echo '</form>';
             echo '</div>';
           }
-        }
+        
+          }
+        
+      
         ?>
     
       </div>

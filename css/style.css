@@ -501,6 +501,22 @@ footer p a {
   margin-bottom: 10px;
 }
 
+.rmv-btn {
+  background-color: #ee4236;
+  color: #ffffff;
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rmv-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: solid 1px rgb(0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
 
 .product-description {
   font-size: 20px; 
