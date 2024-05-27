@@ -497,7 +497,9 @@ footer p a {
 
 }
 
-
+.product img {
+  margin-bottom: 10px;
+}
 
 
 .product-description {

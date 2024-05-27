@@ -62,7 +62,7 @@ class Produkty
 
                 echo '<div class="price-cart-container">';
                 echo '<p class="card-text produkt-text">Cena: ' . $produkt['cena'] . '</p>';
-                echo '<a href="produkt.php?id=' . $produkt['produkt_id'] . '" class="shopping-cart-button"><i class="fa fa-shopping-cart"></i></a>';
+                echo '<a href="../includes/addToC.php?id=' . $produkt['produkt_id'] . '" class="shopping-cart-button"><i class="fa fa-shopping-cart"></i></a>';
 
                 // Check if the user is logged in
                 if (isset($_SESSION['email'])) {
@@ -132,6 +132,66 @@ class Produkty
             exit();
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
+        }
+    }
+}
+
+class Kosik
+{
+    private $conn;
+
+    public function __construct($conn)
+    {
+        $this->conn = $conn;
+    }
+
+    
+    public function addToCart($id)
+    {
+        if (!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = [];
+        }
+
+        $product = $this->getProductById($id); // Táto funkcia by mala vrátiť celý produkt na základe jeho ID
+
+        $cartItem = [
+            'id' => $product['produkt_id'],
+            'name' => $product['nazov'],
+            'price' => $product['cena'],
+            'image' => $product['obrazok']
+        ];
+
+        array_push($_SESSION['cart'], $cartItem);
+        header('Location: ../public_html/produkty.php');
+    }
+ 
+    public function getProductById($id)
+    {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM Produkty WHERE produkt_id = ?");
+            $stmt->execute([$id]);
+            $product = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $product;
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function getCart()
+    {
+        if (!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = [];
+        }
+
+        return $_SESSION['cart'];
+    }
+
+    public function removeFromCart($id)
+    {
+        if (($key = array_search($id, $_SESSION['cart'])) !== false) {
+            unset($_SESSION['cart'][$key]);
         }
     }
 }
