@@ -1040,16 +1040,29 @@ footer p a {
 }
 
 th {
-  background-color: #328fe6;
+  background-color: #000000;
   color: white;
   padding: 10px;
 }
 
 td {
   padding: 10px;
-  background-color: #e8f3fd;
+  background-color: #d8d8d8;
 }
 
 table {
   margin-top: 200px;
+}
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  border: solid 2px black;
+  border-radius: 15px;
+  width: 300px;
+  height: 400px;
+  margin-left: 40%;
+box-shadow: #000000 0px 0px 10px;
 }

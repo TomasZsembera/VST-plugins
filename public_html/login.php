@@ -32,7 +32,7 @@ if (isset($_POST["submit"])) {
 
     <main>
 
-        <section class="container">
+        <section class="container-login">
             <div class="row">
 
                 <div class="col-50 text-center">
@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
                     <form id="contact" method="post">
                         <input type="email" placeholder="email" id="email" name="email" required><br>
                         <input type="password" placeholder="heslo" id="heslo" name="heslo" required><br>
-                        <input type="submit" value="Log In" name="submit">
+                        <input type="submit" value="Log In" name="submit" class = "container-btn-file">
                     </form>
 
 
