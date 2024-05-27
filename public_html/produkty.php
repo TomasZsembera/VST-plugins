@@ -35,6 +35,9 @@ error_reporting(E_ALL);
         if (isset($_SESSION['email'])) {
             echo "<a href='create.php' id='create'>Create</a>";
         }
+        if (isset($_SESSION['email'])) {
+            echo "<a href='objednavky.php' id='objednavky-btn'>Objednavky</a>";
+        }
 
         ?>
 

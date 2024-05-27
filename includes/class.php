@@ -203,6 +203,54 @@ class Kosik
     }
 
 }
+class Objednavky {
+    private $conn;
 
+    public function __construct($conn)
+    {
+        $this->conn = $conn;
+    }
+
+    public function getObjednavky()
+    {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM Objednavky");
+            $stmt->execute();
+            $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            echo '<table class="order">';
+            echo '<tr><th>Objednavka ID</th><th>Meno</th><th>Priezvisko</th><th>Adresa</th><th>Mesto</th><th>Email</th><th>Suma</th></tr>';
+            
+            foreach ($orders as $order) {
+                echo '<tr>';
+                echo '<td>' . $order['objednavka_id'] . '</td>';
+                echo '<td>' . $order['meno'] . '</td>';
+                echo '<td>' . $order['priezvisko'] . '</td>';
+                echo '<td>' . $order['adresa'] . '</td>';
+                echo '<td>' . $order['mesto'] . '</td>';
+                echo '<td>' . $order['email'] . '</td>';
+                echo '<td>' . $order['suma'] . '</td>';
+                echo '</tr>';
+            }
+            
+            echo '</table>';
+    
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function createOrder($meno, $priezvisko, $adresa, $mesto, $psc, $telefon, $email, $produkt, $cena)
+    {
+        try {
+            $stmt = $this->conn->prepare("INSERT INTO Objednavky (meno, priezvisko, adresa, mesto, psc, telefon, email, produkt, cena) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->execute([$meno, $priezvisko, $adresa, $mesto, $psc, $telefon, $email, $produkt, $cena]);
+
+        }
+        catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+    }
+}
+}
 
 ?>
