@@ -239,7 +239,7 @@ footer p a {
   transition: background-color 0.3s ease;
 }
 
-/* Zmena farby pozadia pri najazdení myšou */
+
 .tlacidlo:hover {
   background-color: #3498db;
   color: white;
@@ -290,13 +290,11 @@ footer p a {
 }
 
 .produkt-title {
-  /* Add styles for the product title here */
   text-align: center;
   margin-top: 1rem;
 }
 
 .produkt-text {
-  /* Add styles for the product text here */
   margin-left: 1rem;
 }
 
@@ -307,7 +305,6 @@ footer p a {
 }
 
 .shopping-cart-button {
-  /* Add your styles here */
   background-color: black;
   padding: 10px;
   border-radius: 15px;
@@ -354,7 +351,7 @@ footer p a {
     border: solid 2px black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
     
-}
+} 
 
 .create-container {
   width: 400px;
