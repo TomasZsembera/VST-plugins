@@ -28,7 +28,7 @@ include_once '../includes/header.php';
     <section class="container">
       <div class="row">
         <div class="col-100 text-center">
-          <h2>Ďakujeme za vyplnenie formulára✅</h2>
+          <h2>Ďakujeme za Objednávku✅</h2>
         </div>
       </div>
     </section>
