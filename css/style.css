@@ -1075,3 +1075,30 @@ table {
   margin-left: 40%;
 box-shadow: #000000 0px 0px 10px;
 }
+
+.pridat {
+  background-color: #328fe6;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+  border-radius: 15px;
+  line-height: 3;
+  border: solid 2px black;
+  padding: 5px;
+  transition: 0.3s;
+  margin-bot: 10px;
+
+}
+
+.pridat:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  scale: 1.05;
+  border: solid 2px black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}

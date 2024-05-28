@@ -3,17 +3,13 @@ session_start();
 include_once '../includes/header.php';
 require_once '../includes/connection.php';
 require_once "../includes/class.php";
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 if (isset($_GET['id'])) {
     $product = new Produkty($conn);
     $PRODUKT = $product->getProduct($_GET['id']);
-    if ($PRODUKT) {
-        echo $PRODUKT['nazov'];
-    } else {
-        echo "Product not found";
-    }
+}
+if (isset($_POST['submit'])) {
+    $objednavky = new Kosik($conn);
+    $objednavky->addToCart($_POST['produkt_id']);
 }
 ?>
 
@@ -43,10 +39,15 @@ if (isset($_GET['id'])) {
         echo "<div class='product-info'>";
         echo "<h1 class='product-title'>" . $PRODUKT['nazov'] . "</h1>";
         echo "<p class='product-title'>" . $PRODUKT['cena'] . " €</p>";
+        echo "<form method='POST'>";
+        echo "<input type='hidden' name='produkt_id' value='" . $PRODUKT['produkt_id'] . "'>";
+        echo "<input type='submit' name='submit' class='pridat' value='Pridať do košíka'>";
+        echo "</form>";
         echo "<p class='product-description'>" . $PRODUKT['popis'] . "</p>";
         echo "</div></div>";
     }
 ?>
+    
 
     </body>
 </main>
